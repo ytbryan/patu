@@ -8,14 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = Patu::VERSION
   spec.authors       = ["Bryan Lim"]
   spec.email         = ["ytbryan@gmail.com"]
-
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{ Write a longer description or delete this line.}
   spec.homepage      = "http://github.com/ytbryan/patu"
   spec.license       = "MIT"
+
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = ["patu"]
   spec.require_paths = ["lib"]
+  
   spec.add_runtime_dependency 'thor' , '~> 0.19.1'
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
