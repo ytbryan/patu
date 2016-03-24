@@ -1,8 +1,9 @@
 # Patu
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/patu`. To experiment with that code, run `bin/console` for an interactive prompt.
+patu is a simple command line scraper for daily scraping. It is designed for usage not speed.
 
-TODO: Delete this and the text above, and describe your gem
+> Patu is a genus of spiders in the family Symphytognathidae that occurs in Colombia and Oceania. Patu digua is the smallest species of spider described to date.
+
 
 ## Installation
 
@@ -22,8 +23,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type in your command prompt.
+```
+  patu <url> <css> #this will only yield a single column data
 
+```
+
+
+For mulitple webpages or multiple elements, use a data.yml to define patu
+```
+- path: "data.csv"
+- url:
+    https://rubygems.org/gems/aka2
+    https://rubygems.org/gems/aka2
+    https://rubygems.org/gems/aka2
+    https://rubygems.org/gems/aka2
+- column_array:
+  - column:
+      name: "well"
+      pattern: "a.something"
+  - column:
+      name: "well"
+      pattern: "a.something"
+```
+
+call patu, it will auto detect data.yml
+
+```
+patu
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -32,10 +60,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/patu. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ytbryan/patu. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+Patu is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

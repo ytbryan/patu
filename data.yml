@@ -1,0 +1,11 @@
+urls:
+  - "https://rubygems.org/gems/aka2"
+
+selectors:
+  - ".gem__downloads"
+
+columns:
+  - "aka2"
+
+csv: "new_data.csv"
+yml: "data.yml"
