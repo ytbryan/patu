@@ -7,6 +7,7 @@ module Patu
   class Base < Thor
     check_unknown_options!
     package_name 'patu'
+    default :default
 
     desc :default, ''
     def default url=nil, pattern=nil
