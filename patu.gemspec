@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.version       = Patu::VERSION
   spec.authors       = ["Bryan Lim"]
   spec.email         = ["ytbryan@gmail.com"]
-  spec.summary       = %q{ Patu is a simple scraper that scrap info and save it as csv.}
-  spec.description   = %q{ Patu is a simple scraper that scrap info and save it as csv.}
+  spec.summary       = %q{ Patu is a simple command line scraper for daily scraping.}
+  spec.description   = %q{ Patu is a simple command line scraper for daily scraping.}
   spec.homepage      = "http://github.com/ytbryan/patu"
   spec.license       = "MIT"
   spec.post_install_message = Log::MESSAGE

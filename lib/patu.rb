@@ -1,4 +1,9 @@
-require 'patu/dependencies'
+require "patu/version"
+require 'thor'
+require 'nokogiri'
+require 'open-uri'
+require 'csv'
+require 'yaml'
 
 module Patu
   class Base < Thor
