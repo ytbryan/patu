@@ -11,8 +11,8 @@ module Patu
     package_name 'patu'
     default_task :print
 
-    desc :test_this, 'patu try <url> <pattern>'
-    def test_this url, pattern
+    desc :test, 'patu test will print out result on terminal'
+    def test url, pattern
       test_process_argv(url, pattern)
     end
 
@@ -58,7 +58,7 @@ module Patu
       web_page = Nokogiri::HTML(open(url))
       scraped_result = web_page.css(pattern)
       # print_csv(scraped_result, scraped_result.count)
-      puts "#{scraped_result} + #{scraped_result.count}"
+      puts "#{scraped_result} \n=======\nfound #{scraped_result.count} for pattern #{pattern}"
     end
 
     def process_argv(url, pattern)
