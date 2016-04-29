@@ -11,8 +11,8 @@ module Patu
     package_name 'patu'
     default_task :print
 
-    desc :test, 'patu test <url> <pattern>'
-    def test url, pattern
+    desc :test_this, 'patu try <url> <pattern>'
+    def test_this url, pattern
       test_process_argv(url, pattern)
     end
 
