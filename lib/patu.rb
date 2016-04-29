@@ -54,7 +54,13 @@ module Patu
 
     private
 
+    # def test_process_argv(url)
+    #   puts web_page = Nokogiri::HTML(open(url))
+    # end
+
+
     def test_process_argv(url, pattern)
+      puts pattern
       web_page = Nokogiri::HTML(open(url))
       scraped_result = web_page.css(pattern)
       # print_csv(scraped_result, scraped_result.count)
