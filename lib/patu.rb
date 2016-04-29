@@ -11,6 +11,12 @@ module Patu
     package_name 'patu'
     default_task :print
 
+    desc :test, 'patu test <url> <pattern>'
+    def test url, pattern
+      test_process_argv(url, pattern)
+    end
+
+
     desc :scrap, 'patu scrap <url> <pattern>'
     def scrap url, pattern
       process_argv(url, pattern)
@@ -47,6 +53,14 @@ module Patu
 
 
     private
+
+    def test_process_argv(url, pattern)
+      web_page = Nokogiri::HTML(open(url))
+      scraped_result = web_page.css(pattern)
+      # print_csv(scraped_result, scraped_result.count)
+      puts "#{scraped_result} + #{scraped_result.count}"
+    end
+
     def process_argv(url, pattern)
       web_page = Nokogiri::HTML(open(url))
       scraped_result = web_page.css(pattern)
