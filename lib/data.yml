@@ -1,0 +1,20 @@
+# urls:
+#   - "https://www.google.com/finance?q=NASDAQ%3AAAPL&ei=nObzVvmhO5KYuASsm5ywCQ"
+# pattern:
+#   - "span#ref_22144_l"
+# columns:
+#   - "aka2"
+# csv: "new_data.csv"
+# yml: "data.yml"
+
+csv: "data.csv"
+yml: "data.yml"
+# data:
+#   -
+#     url: "https://www.google.com/finance?q=NASDAQ%3AAAPL&ei=nObzVvmhO5KYuASsm5ywCQ"
+#     pattern: "span#ref_22144_l"
+#     column: "boo"
+#   -
+#     url: "https://www.google.com/finance?q=NASDAQ%3AAAPL&ei=nObzVvmhO5KYuASsm5ywCQ"
+#     pattern: "span#ref_22144_l"
+#     column: "boo"

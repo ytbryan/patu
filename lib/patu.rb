@@ -11,8 +11,13 @@ module Patu
     package_name 'patu'
     default_task :print
 
-    desc :test, 'patu test will print out result on terminal'
-    def test url, pattern
+    desc :data, 'generate a default data.yml'
+    def data
+      FileUtils.cp 'data.yml', './'
+    end
+
+    desc :test, 'print out scrapped result on terminal'
+    def test url, pattern=nil
       test_process_argv(url, pattern)
     end
 
@@ -22,7 +27,7 @@ module Patu
       process_argv(url, pattern)
     end
 
-    desc :go, 'This command will run the data.yml in current directory.'
+    desc :go, 'run the data.yml in current directory.'
     def go
       if File.exists?("data.yml")
         data = YAML.load_file("data.yml")
@@ -54,14 +59,14 @@ module Patu
 
     private
 
-    # def test_process_argv(url)
-    #   puts web_page = Nokogiri::HTML(open(url))
-    # end
-
 
     def test_process_argv(url, pattern)
-      puts pattern
-      web_page = Nokogiri::HTML(open(url))
+
+      if pattern == nil
+        puts web_page = Nokogiri::HTML(open(url))
+      else
+        web_page = Nokogiri::HTML(open(url))
+      end
       scraped_result = web_page.css(pattern)
       # print_csv(scraped_result, scraped_result.count)
       puts "#{scraped_result} \n=======\nfound #{scraped_result.count} for pattern #{pattern}"
